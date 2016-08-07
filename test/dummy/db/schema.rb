@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -9,18 +8,18 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120730092740) do
+ActiveRecord::Schema.define(version: 20130131161413) do
 
-  create_table "airdata_airoptions", :force => true do |t|
+  create_table "airdata_airoptions", force: :cascade do |t|
     t.string   "key"
     t.string   "value"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "airdata_airports", :force => true do |t|
+  create_table "airdata_airports", force: :cascade do |t|
     t.string   "icao"
     t.string   "name"
     t.float    "lat"
@@ -28,13 +27,13 @@ ActiveRecord::Schema.define(:version => 20120730092740) do
     t.integer  "elevation"
     t.integer  "ta"
     t.integer  "msa"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "airdata_runways", :force => true do |t|
+  create_table "airdata_runways", force: :cascade do |t|
     t.integer  "airport_id"
-    t.integer  "number"
+    t.string   "number"
     t.integer  "course"
     t.integer  "length"
     t.boolean  "ils"
@@ -44,11 +43,11 @@ ActiveRecord::Schema.define(:version => 20120730092740) do
     t.float    "lon"
     t.integer  "elevation"
     t.float    "glidepath"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "airdata_waypoints", :force => true do |t|
+  create_table "airdata_waypoints", force: :cascade do |t|
     t.string   "ident"
     t.string   "name"
     t.float    "freq"
@@ -57,8 +56,8 @@ ActiveRecord::Schema.define(:version => 20120730092740) do
     t.integer  "range"
     t.integer  "elevation"
     t.string   "country_code"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

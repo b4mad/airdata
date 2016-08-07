@@ -12,15 +12,15 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/tarakanbg/airdata"
   s.summary     = "Rails engine for adding aviation related models and data to your web application"
   s.description = "Rails engine for adding aviation related models and data to your web application"
+  s.licenses = ['GPL-3']
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", '>= 5.0.0.rc1'
-  # s.add_dependency "jquery-rails"
+  s.add_dependency 'rails', '>= 5.0.0'
+  s.add_dependency 'jquery-rails', '>= 3.0.0'
   s.add_dependency 'curb', '~> 0.9.3'
-  s.add_dependency 'activerecord-import', '~> 0.13.0'
-  s.add_dependency 'protected_attributes', '~> 1.1', '>= 1.1.3'
+  s.add_dependency 'activerecord-import', '~> 0.15.0'
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'sqlite3', '>= 1.3.11'
 end
